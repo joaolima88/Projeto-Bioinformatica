@@ -1,0 +1,40 @@
+Resultados da Otimização do SVM com RobustScaler
+Data e Hora: 20250620_214345
+----------------------------------------------------
+
+Melhores Hiperparâmetros Encontrados:
+  kernel: rbf
+  gamma: scale
+  C: 10
+
+Resultados da Validação Cruzada (Médias e Desvios Padrão - ESCALA ESCALADA (RobustScaler)):
+  MSE médio (escala escalada): 0.1847 +/- 0.0081
+  MAE médio (escala escalada): 0.3204 +/- 0.0060
+  R2 médio (escala escalada): 0.6117 +/- 0.0123
+  Correlação de Pearson média (escala escalada): 0.7838 +/- 0.0073
+Métricas no Dataset Completo (Com o melhor modelo treinado uma vez no dataset inteiro - ESCALA ORIGINAL):
+  MSE Global (escala original): 470074974.6284
+  MAE Global (escala original): 14285.4080
+  MAE Percentual (vs. Média): 23.39%
+  RMSE Global (escala original): 21681.2125
+  RMSE Percentual (vs. Média): 35.50%
+  R2 Global (escala original): 0.8879
+  Pearson Global (escala original): 0.9446
+
+--- Escala dos Valores Originais de Expressão Proteica ---
+  Mínimo: 1357.1507
+  Máximo: 204059.9524
+  Média: 61077.1584
+  Desvio Padrão: 64770.3892
+  Amplitude: 202702.8018
+
+Informações Adicionais:
+  Número de Amostras: 9336
+  Número de Features: 768
+  Tipo de Embeddings: DNABERT
+  Folds de Validação Cruzada: 5
+  Iterações de RandomizedSearchCV: 3
+  Ficheiro de Embeddings Usado: dnabert_embeddings.npy
+  Ficheiro de Modelo SVM Guardado: best_svm_model_robust_20250620_214345.joblib
+  Ficheiro de Dados de Previsões Guardado: svm_robust_predictions_data_20250620_214345.npy
+  Ficheiro do Scaler Guardado: scaler_robust.pkl
