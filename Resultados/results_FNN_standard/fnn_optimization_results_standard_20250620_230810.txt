@@ -1,0 +1,31 @@
+Resultados da Otimização da FNN
+Data e Hora: 20250620_230810
+----------------------------------------------------
+
+Hiperparâmetros da FNN:
+  Dimensão Oculta: 256
+  Taxa de Aprendizagem: 0.001
+  Número de Épocas: 100
+  Tamanho do Lote: 64
+
+Resultados da Validação Cruzada (Médias e Desvios Padrão - ESCALA ESTANDARDIZADA):
+  MSE médio (escala estandarizada): 0.4268 +/- 0.0205
+  MAE médio (escala estandarizada): 0.4794 +/- 0.0104
+  R2 médio (escala estandarizada): 0.5727 +/- 0.0203
+  Correlação de Pearson média (escala estandarizada): 0.7761 +/- 0.0089
+
+Métricas no Dataset Completo (Com o modelo final treinado uma vez no dataset inteiro - ESCALA ORIGINAL):
+  MSE Global (escala original): 123223661.1736
+  MAE Global (escala original): 8545.7397
+  R2 Global (escala original): 0.9706
+  Pearson Global (escala original): 0.9856
+
+Informações Adicionais:
+  Número de Amostras: 9336
+  Número de Features: 768
+  Tipo de Embeddings: DNABERT
+  Folds de Validação Cruzada: 5
+  Ficheiro de Embeddings Usado: dnabert_embeddings.npy
+  Ficheiro de Modelo FNN Guardado: best_standard_fnn_model_20250620_230810.pth
+  Ficheiro de Dados de Previsões Guardado: fnn_predictions_data_standard_20250620_230810.npy
+  Ficheiro de StandardScaler Guardado: scaler_standard.pkl

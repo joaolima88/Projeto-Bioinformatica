@@ -1,0 +1,31 @@
+Resultados da Otimização da FNN com RobustScaler
+Data e Hora: 20250620_224238
+----------------------------------------------------
+
+Hiperparâmetros da FNN:
+  Dimensão Oculta: 256
+  Taxa de Aprendizagem: 0.001
+  Número de Épocas: 100
+  Tamanho do Lote: 64
+
+Resultados da Validação Cruzada (Médias e Desvios Padrão - ESCALA ESCALADA (RobustScaler)):
+  MSE médio (escala escalada): 0.2012 +/- 0.0071
+  MAE médio (escala escalada): 0.3245 +/- 0.0067
+  R2 médio (escala escalada): 0.5770 +/- 0.0091
+  Correlação de Pearson média (escala escalada): 0.7741 +/- 0.0037
+
+Métricas no Dataset Completo (Com o modelo final treinado uma vez no dataset inteiro - ESCALA ORIGINAL):
+  MSE Global (escala original): 111427405.1398
+  MAE Global (escala original): 8107.8810
+  R2 Global (escala original): 0.9734
+  Pearson Global (escala original): 0.9867
+
+Informações Adicionais:
+  Número de Amostras: 9336
+  Número de Features: 768
+  Tipo de Embeddings: DNABERT
+  Folds de Validação Cruzada: 5
+  Ficheiro de Embeddings Usado: dnabert_embeddings.npy
+  Ficheiro de Modelo FNN Guardado: best_fnn_model_robust_20250620_224238.pth
+  Ficheiro de Dados de Previsões Guardado: fnn_robust_predictions_data_20250620_224238.npy
+  Ficheiro do Scaler Guardado: scaler_robust.pkl
