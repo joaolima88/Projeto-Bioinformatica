@@ -1,0 +1,33 @@
+Resultados da Otimização de Hiperparâmetros do SVM
+Data e Hora: 20250620_233210
+----------------------------------------------------
+
+Melhores Hiperparâmetros Encontrados:
+  kernel: rbf
+  gamma: scale
+  C: 10
+
+Resultados da Validação Cruzada (Médias e Desvios Padrão - ESCALA ESTANDARDIZADA):
+  MSE médio (escala estandarizada): 0.3896 +/- 0.0177
+  MAE médio (escala estandarizada): 0.4603 +/- 0.0092
+  R2 médio (escala estandarizada): 0.6101 +/- 0.0110
+  Correlação de Pearson média (escala estandarizada): 0.7822 +/- 0.0068
+
+Métricas no Dataset Completo (Com o melhor modelo treinado uma vez no dataset inteiro - ESCALA ORIGINAL):
+  MSE Global (escala original): 600864490.6510
+  MAE Global (escala original): 15066.7422
+  MAE Percentual (vs. Média): 24.67%
+  RMSE Global (escala original): 24512.5374
+  RMSE Percentual (vs. Média): 40.13%
+  R2 Global (escala original): 0.8568
+  Pearson Global (escala original): 0.9293
+
+Informações Adicionais:
+  Número de Amostras: 9336
+  Número de Features: 768
+  Tipo de Embeddings: DNABERT
+  Folds de Validação Cruzada: 5
+  Ficheiro de Embeddings Usado: dnabert_embeddings.npy
+  Ficheiro de Modelo SVR Guardado: best_svr_model_20250620_233210.joblib
+  Ficheiro de Dados de Previsões Guardado: svm_standard_predictions_data_20250620_233210.npy
+  Ficheiro de StandardScaler Guardado: scaler_standard.pkl
