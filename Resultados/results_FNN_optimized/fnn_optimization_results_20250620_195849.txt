@@ -1,0 +1,45 @@
+Resultados da Otimização da FNN com RobustScaler (Melhorada)
+Data e Hora: 20250620_195849
+----------------------------------------------------
+
+Hiperparâmetros da FNN:
+  Dimensão Oculta 1: 256
+  Dimensão Oculta 2: 128
+  Taxa de Aprendizagem: 0.001
+  Número de Épocas Máximo: 250
+  Tamanho do Lote: 64
+  Taxa de Dropout: 0.2
+  Weight Decay (L2 Reg.): 1e-05
+  Patience para Early Stopping: 25
+
+Resultados da Validação Cruzada (Médias e Desvios Padrão - ESCALA ESCALADA (RobustScaler)):
+  MSE médio (escala escalada): 0.1640 +/- 0.0110
+  MAE médio (escala escalada): 0.2654 +/- 0.0103
+  R2 médio (escala escalada): 0.6555 +/- 0.0153
+  Correlação de Pearson média (escala escalada): 0.8118 +/- 0.0089
+
+Métricas no Dataset Completo (Com o modelo final treinado uma vez no dataset inteiro - ESCALA ORIGINAL):
+  MSE Global (escala original): 67064764.2469
+  MAE Global (escala original): 6162.5482
+  MAE Percentual (vs. Média): 10.09%
+  RMSE Global (escala original): 8189.3079
+  RMSE Percentual (vs. Média): 13.41%
+  R2 Global (escala original): 0.9840
+  Pearson Global (escala original): 0.9928
+
+--- Escala dos Valores Originais de Expressão Proteica ---
+  Mínimo: 1357.1507
+  Máximo: 204059.9524
+  Média: 61077.1584
+  Desvio Padrão: 64770.3892
+  Amplitude: 202702.8018
+
+Informações Adicionais:
+  Número de Amostras: 9336
+  Número de Features: 768
+  Tipo de Embeddings: DNABERT
+  Folds de Validação Cruzada: 5
+  Ficheiro de Embeddings Usado: dnabert_embeddings.npy
+  Ficheiro de Modelo FNN Guardado: best_fnn_model_robust_20250620_195849.pth
+  Ficheiro de Dados de Previsões Guardado: fnn_predictions_data_20250620_195849.npy
+  Ficheiro do Scaler Guardado: scaler_robust.pkl
