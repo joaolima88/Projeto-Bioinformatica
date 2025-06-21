@@ -1,4 +1,4 @@
-Important Note on FNN Performance Reproducibility:
+# Important Note on FNN Performance Reproducibility:
 
 There might exist some slight variations in the reported FNN performance metrics within the accompanying paper compared to the results present in the save files. This is a normal phenomenon for neural networks and occurred because the FNN training scripts were run one final time immediately before the paper's submission.
 
