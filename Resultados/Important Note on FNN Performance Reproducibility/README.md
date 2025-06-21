@@ -1,0 +1,5 @@
+Important Note on FNN Performance Reproducibility:
+
+There might exist some slight variations in the reported FNN performance metrics within the accompanying paper compared to the results present in the save files. This is a normal phenomenon for neural networks and occurred because the FNN training scripts were run one final time immediately before the paper's submission.
+
+These minor discrepancies arise from the inherent stochastic (random) nature of neural network training. Even without altering any parameters or variables in the script, factors such as the random initialization of the network's weights, the order of data shuffling during training, and subtle differences in floating-point operations (especially on various hardware or software environments) can lead to slightly different convergence paths and, consequently, slightly varied final performance metrics. The model's excellent performance remains consistent, but the exact numerical values may fluctuate slightly across runs.
