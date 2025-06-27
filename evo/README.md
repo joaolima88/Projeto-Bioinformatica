@@ -83,19 +83,19 @@ Verificar instalação do CUDA Toolkit:
 
 1. Verifique se o nvcc está no PATH e se CUDA_HOME está definido:
 
-	`which nvcc`
-	`echo $CUDA_HOME`
+	- `which nvcc`
+	- `echo $CUDA_HOME`
    
 2. Se não estiverem, tente localizar a instalação do CUDA Toolkit:
 
-	`ls -d /usr/local/cuda`
-	`ls -d /opt/cuda`
+	- `ls -d /usr/local/cuda`
+	- `ls -d /opt/cuda`
    
 3. Após encontrar o caminho (ex: /usr/local/cuda-12.2), defina as variáveis de ambiente manualmente (substituindo X.Y pela sua versão CUDA):
 
-	`export CUDA_HOME=/path/to/cuda-X.Y`
-	`export PATH=$CUDA_HOME/bin:$PATH`
-	`export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH`
+	- `export CUDA_HOME=/path/to/cuda-X.Y`
+	- `export PATH=$CUDA_HOME/bin:$PATH`
+	- `export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH`
    
 ---
 
