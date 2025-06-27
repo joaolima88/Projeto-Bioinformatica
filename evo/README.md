@@ -93,7 +93,7 @@ Verificar instalação do CUDA Toolkit:
    
 3. Após encontrar o caminho (ex: /usr/local/cuda-12.2), defina as variáveis de ambiente manualmente (substituindo X.Y pela sua versão CUDA):
 
-	`export CUDA_HOME=/path/to/cuda-X.Y`  # Exemplo: /usr/local/cuda-12.2
+	`export CUDA_HOME=/path/to/cuda-X.Y`
 	`export PATH=$CUDA_HOME/bin:$PATH`
 	`export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH`
    
