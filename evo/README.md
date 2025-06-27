@@ -1,5 +1,5 @@
 # Estrutura desta pasta:
-
+```
 evo/
 ├── preprocessamento_e_filtragem.py             # Script para limpeza, filtragem e escalagem dos dados brutos
 ├── preprocessamento_e_filtragem.ipynb          # Script para limpeza, filtragem e escalagem dos dados brutos em formato ipynb (possui informação adicional sobre o processamento)
@@ -21,11 +21,11 @@ evo/
 │   └── scaler_robust.pkl                       # Objeto RobustScaler
 │
 └── results/                                    # Pasta para guardar resultados dos modelos treinados, logs e gráficos
+```
 
 ---
 
 # Instruções de Setup do Ambiente para o Projeto EVO
-
 
 ## 1. Requisitos de Hardware (GPU)
 
@@ -55,6 +55,7 @@ Após a instalação, certifique-se de que o Conda/Mamba está inicializado no s
 
 Para garantir um ambiente consistente com as dependências básicas, utilize o ficheiro environment.yml:
 
+
 name: evo_env
 channels:
   - bioconda
@@ -62,16 +63,15 @@ channels:
   - defaults
 dependencies:
   - bioconda::prodigal
-  - python=3.11
+  - python=3.10
   - biopython
-  - biotite
   - pandas
 
 
 Passos para criar o ambiente:
 
 1. Navegue para a diretoria onde guardou o environment.yml
-2. crie o ambiente com "conda env create -f environment.yml"
+2. crie o ambiente com `conda env create -f environment.yml`
 3. Ative o ambiente
    
 ---
@@ -84,19 +84,19 @@ Verificar instalação do CUDA Toolkit:
 
 1. Verifique se o nvcc está no PATH e se CUDA_HOME está definido:
 
-   `which nvcc`
-   `echo $CUDA_HOME`
+   - `which nvcc`
+   - `echo $CUDA_HOME`
    
 2. Se não estiverem, tente localizar a instalação do CUDA Toolkit:
 
-   `ls -d /usr/local/cuda`
-   `ls -d /opt/cuda`
+   - `ls -d /usr/local/cuda`
+   - `ls -d /opt/cuda`
    
 3. Após encontrar o caminho (ex: /usr/local/cuda-12.2), defina as variáveis de ambiente manualmente (substituindo X.Y pela sua versão CUDA):
 
-   `export CUDA_HOME=/path/to/cuda-X.Y`  # Exemplo: /usr/local/cuda-12.2
-   `export PATH=$CUDA_HOME/bin:$PATH`
-   `export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH`
+   - `export CUDA_HOME=/path/to/cuda-X.Y`  # Exemplo: /usr/local/cuda-12.2
+   - `export PATH=$CUDA_HOME/bin:$PATH`
+   - `export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH`
    
 ---
 
@@ -111,46 +111,31 @@ Importante: A ordem de instalação é crucial para evitar conflitos e garantir 
 
 Consulte o site oficial do PyTorch (https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/) para a versão mais recente e o comando conda install correto que corresponda à sua versão de CUDA Toolkit e arquitetura de GPU.
 
-Exemplo para CUDA 12.1: 
+Exemplo para CUDA 12.1:
+
+`conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia -y` # Verifique a sua versão de CUDA e ajuste o comando conforme necessário.)
+
+
+#### b) Instalar as restantes bibliotecas via pip: 
+
+Ninja (aconselhado para compilação otimizada mas não é essencial):
+`pip install ninja`
+
+  Verifique se o Ninja está funcional:
+  `ninja --version` e depois  `echo $?`  # Deve retornar 0
  
- `conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia -y` # Verifique a sua versão de CUDA e ajuste o comando conforme necessário.)
-
-
-#### b) Instalar as dependências do FlashAttention-2
-
-Requisitos do FlashAttention-2:
-
-- PyTorch 2.2 ou superior (com suporte CUDA).
-
-- Pacote packaging:  
-
-   `pip install packaging`
-
-- Ninja (crítico para compilação otimizada):
-
-   pip install ninja
-
-  - Verifique se o Ninja está funcional:
+  Se falhar, reinstale:
+  `pip uninstall -y ninja && pip install ninja`
  
-     `ninja --version` e depois  `echo $?`  # Deve retornar 0
- 
-  - Se falhar, reinstale:
- 
-     `pip uninstall -y ninja && pip install ninja`
- 
-  - Sem Ninja, a compilação pode levar até 2h (vs. 3-5 minutos com Ninja em máquinas multicore).
+  Sem Ninja, a compilação pode levar até 2h (vs. 3-5 minutos com Ninja em máquinas multicore).
 
 
-#### c) Instalar o FlashAttention-2:
-
-   FlashAttention-2 (sem isolamento de build):
-
-    `pip install flash-attn --no-build-isolation`
+Stripedhyena
+`pip install stripedhyena==0.2.2 evo-model scikit-learn tqdm tokenizers transformers pandas`
 
 
-#### d) Instalar stripedhyena e outras bibliotecas via pip (APÓS PyTorch)
-
-    `pip install stripedhyena==0.2.2 evo-model scikit-learn tqdm tokenizers transformers`
+O stripedhyena deve puxar o flashattention automaticamente, mas caso não aconteça:
+`pip install flash-attn --no-build-isolation`
 
 
 ---
