@@ -93,7 +93,7 @@ Verificar instalação do CUDA Toolkit:
    
 3. Após encontrar o caminho (ex: /usr/local/cuda-12.2), defina as variáveis de ambiente manualmente (substituindo X.Y pela sua versão CUDA):
 
-	- `export CUDA_HOME=/path/to/cuda-X.Y`
+	- `export CUDA_HOME=/path/to/cuda-X.Y` # Exemplo: /usr/local/cuda-12.2
 	- `export PATH=$CUDA_HOME/bin:$PATH`
 	- `export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH`
    
@@ -112,36 +112,36 @@ Consulte o site oficial do PyTorch (https://pytorch.org/get-started/locally/](ht
 
 Exemplo para CUDA 12.1: 
  
- `conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia -y` # Verifique a sua versão de CUDA e ajuste o comando conforme necessário.)
+ - `conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia -y` # Verifique a sua versão de CUDA e ajuste o comando conforme necessário.)
 
 
 #### b) Instalar as restantes bibliotecas via pip: 
 
 - Ninja (aconselhado para compilação otimizada mas não é essencial):
 
-	`pip install ninja`
+	- `pip install ninja`
 
   - Verifique se o Ninja está funcional:
  
-	`ninja --version` e depois  `echo $?`  # Deve retornar 0
+	- `ninja --version` e depois  `echo $?`  # Deve retornar 0
  
   - Se falhar, reinstale:
 
-	`pip uninstall -y ninja && pip install ninja`
+	- `pip uninstall -y ninja && pip install ninja`
  
   - Sem Ninja, a compilação pode levar até 2h (vs. 3-5 minutos com Ninja em máquinas multicore).
 
 
 - Stripedhyena
 
-	`pip install stripedhyena==0.2.2 evo-model scikit-learn tqdm tokenizers transformers pandas`
+	- `pip install stripedhyena==0.2.2 evo-model scikit-learn tqdm tokenizers transformers pandas`
 
 
 O stripedhyena deve puxar o flashattention automaticamente, mas caso não aconteça:
 
  - FlashAttention-2 (sem isolamento de build):
 
-	`pip install flash-attn --no-build-isolation`
+	- `pip install flash-attn --no-build-isolation`
 
 
 
