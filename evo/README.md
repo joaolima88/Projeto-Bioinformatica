@@ -119,23 +119,23 @@ Exemplo para CUDA 12.1:
 #### b) Instalar as restantes bibliotecas via pip: 
 
 Ninja (aconselhado para compilação otimizada mas não é essencial):
-`pip install ninja`
+- `pip install ninja`
 
   Verifique se o Ninja está funcional:
-  `ninja --version` e depois  `echo $?`  # Deve retornar 0
+  - `ninja --version` e depois  `echo $?`  # Deve retornar 0
  
   Se falhar, reinstale:
-  `pip uninstall -y ninja && pip install ninja`
+  - `pip uninstall -y ninja && pip install ninja`
  
   Sem Ninja, a compilação pode levar até 2h (vs. 3-5 minutos com Ninja em máquinas multicore).
 
 
 Stripedhyena
-`pip install stripedhyena==0.2.2 evo-model scikit-learn tqdm tokenizers transformers pandas`
+- `pip install stripedhyena==0.2.2 evo-model scikit-learn tqdm tokenizers transformers pandas`
 
 
 O stripedhyena deve puxar o flashattention automaticamente, mas caso não aconteça:
-`pip install flash-attn --no-build-isolation`
+- `pip install flash-attn --no-build-isolation`
 
 
 ---
@@ -143,8 +143,8 @@ O stripedhyena deve puxar o flashattention automaticamente, mas caso não aconte
 
 ## Repositórios a consultar:
 
-FlashAttention - https://github.com/Dao-AILab/flash-attention
-StripedHyena - https://github.com/togethercomputer/stripedhyena
-evo - https://github.com/evo-design/evo?tab=readme-ov-file
+- FlashAttention - https://github.com/Dao-AILab/flash-attention
+- StripedHyena - https://github.com/togethercomputer/stripedhyena
+- evo - https://github.com/evo-design/evo?tab=readme-ov-file
 
 
