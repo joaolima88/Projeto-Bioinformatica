@@ -1,5 +1,6 @@
 # Estrutura desta pasta:
 
+```
 evo/
 ├── preprocessamento_e_filtragem.py
 ├── preprocessamento_e_filtragem.ipynb
@@ -21,6 +22,9 @@ evo/
 │   └── scaler_robust.pkl
 │
 └── results/
+
+```
+
 ---
 
 # Instruções de Setup do Ambiente para o Projeto EVO
