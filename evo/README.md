@@ -132,10 +132,10 @@ Exemplo para CUDA 12.1:
     Sem Ninja, a compilação pode levar até 2h (vs. 3-5 minutos com Ninja em máquinas multicore).
 
 
+
 - Stripedhyena
-
+  
 	- `pip install stripedhyena==0.2.2 evo-model scikit-learn tqdm tokenizers transformers pandas`
-
 
 O stripedhyena deve puxar o flashattention automaticamente, mas caso não aconteça:
 
