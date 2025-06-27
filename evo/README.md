@@ -121,15 +121,15 @@ Exemplo para CUDA 12.1:
 
 	- `pip install ninja`
 
-  - Verifique se o Ninja está funcional:
+    Verifique se o Ninja está funcional:
  
 	- `ninja --version` e depois  `echo $?`  # Deve retornar 0
  
-  - Se falhar, reinstale:
+    Se falhar, reinstale:
 
 	- `pip uninstall -y ninja && pip install ninja`
  
-  - Sem Ninja, a compilação pode levar até 2h (vs. 3-5 minutos com Ninja em máquinas multicore).
+    Sem Ninja, a compilação pode levar até 2h (vs. 3-5 minutos com Ninja em máquinas multicore).
 
 
 - Stripedhyena
@@ -138,8 +138,6 @@ Exemplo para CUDA 12.1:
 
 
 O stripedhyena deve puxar o flashattention automaticamente, mas caso não aconteça:
-
- - FlashAttention-2 (sem isolamento de build):
 
 	- `pip install flash-attn --no-build-isolation`
 
