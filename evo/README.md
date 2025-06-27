@@ -2,26 +2,26 @@
 
 ```
 evo/
-├── preprocessamento_e_filtragem.py
-├── preprocessamento_e_filtragem.ipynb
-├── evo_training.py
-├── README.md
+├── preprocessamento_e_filtragem.py             # Script para limpeza, filtragem e escalagem dos dados brutos
+├── preprocessamento_e_filtragem.ipynb          # Script para limpeza, filtragem e escalagem dos dados brutos em formato ipynb (possui informação adicional sobre o processamento)
+├── evo_training.py                             # Script para treinar e avaliar o modelo SVM usando embeddings EVO
+├── README.md                                   # Este ficheiro: instruções e visão geral do projeto
 │
-├── data/
-│   ├── promoters_RBS.xlsx
-│   ├── promoters.xlsx
-│   ├── RBS.xlsx
-│   ├── training_data.csv
-│   └── training_data.xlsx
+├── data/                                       # Pasta para dados
+│   ├── promoters_RBS.xlsx                      # Dataset original de constructs (promotores + RBS + medições)
+│   ├── promoters.xlsx                          # Dataset de sequências de promotores
+│   ├── RBS.xlsx                                # Dataset de sequências de RBS
+│   ├── training_data.csv                       # Dataset final processado
+│   └── training_data.xlsx                      # Versão Excel do dataset processado (para visualização)
 │
-├── embeddings/
-│   └── evo_embeddings.npy
+├── embeddings/                                 # Pasta para guardar os embeddings de sequência gerados
+│   └── evo_embeddings.npy                      # Embeddings de sequências gerados pelo EVO
 │
-├── scalers/
-│   ├── scaler_standard.pkl
-│   └── scaler_robust.pkl
+├── scalers/                                    # Pasta para guardar os objetos scaler
+│   ├── scaler_standard.pkl                     # Objeto StandardScaler
+│   └── scaler_robust.pkl                       # Objeto RobustScaler
 │
-└── results/
+└── results/                                    # Pasta para guardar resultados dos modelos treinados, logs e gráficos
 
 ```
 
